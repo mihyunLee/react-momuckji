@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Category from "./pages/Category";
 
 const GlobalStyle = createGlobalStyle`
    @font-face {
@@ -14,6 +15,11 @@ const GlobalStyle = createGlobalStyle`
   }
   body{
     background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
   }
 `;
 
@@ -24,6 +30,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/category" element={<Category />} />
         </Routes>
       </BrowserRouter>
     </>
