@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
 const GlobalStyle = createGlobalStyle`
@@ -20,7 +21,11 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
