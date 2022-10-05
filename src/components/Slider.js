@@ -8,8 +8,8 @@ const SliderBlock = styled.div`
   align-items: center;
 
   width: 100%;
-  margin: 50px 0;
-  font-size: 92px;
+  margin: 80px 0;
+  font-size: 128px;
 
   img {
     width: 128px;
@@ -20,7 +20,7 @@ const SliderBlock = styled.div`
 
 const Slider = ({ direction }) => {
   return (
-    <Marquee speed={50} direction={direction} gradient={false}>
+    <Marquee speed={80} direction={direction} gradient={false}>
       <SliderBlock>
         <img alt="bibimbap" src="images/bibimbap.png" />
         <img alt="bubble-tea" src="/images/bubble-tea.png" />

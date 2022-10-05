@@ -10,7 +10,7 @@ const DesktopBtn = styled.button`
   width: 400px;
   height: 100px;
 
-  margin-top: 200px;
+  margin-top: 50px;
 
   border: none;
   border-radius: 20em;

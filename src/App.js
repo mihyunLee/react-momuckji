@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     margin: 0;
   }
+  #root{
+    width: 100%;
+  }
 `;
 
 function App() {
