@@ -22,13 +22,13 @@ const Slider = ({ direction }) => {
   return (
     <Marquee speed={80} direction={direction} gradient={false}>
       <SliderBlock>
-        <img alt="bibimbap" src="images/bibimbap.png" />
-        <img alt="bubble-tea" src="/images/bubble-tea.png" />
-        <img alt="hamburger" src="/images/hamburger.png" />
-        <img alt="ice-cream" src="/images/ice-cream.png" />
-        <img alt="sandwich" src="/images/sandwich.png" />
-        <img alt="sushi" src="/images/sushi.png" />
-        <img alt="tteok" src="/images/tteok.png" />
+        <img alt="food1" src="images/food1.png" />
+        <img alt="food2" src="images/food2.png" />
+        <img alt="food3" src="images/food3.png" />
+        <img alt="food4" src="images/food4.png" />
+        <img alt="food5" src="images/food5.png" />
+        <img alt="food6" src="images/food6.png" />
+        <img alt="food7" src="images/food7.png" />
       </SliderBlock>
     </Marquee>
   );

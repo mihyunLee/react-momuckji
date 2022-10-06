@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CategoryItem from "./CategoryItem";
+import { foodList } from "../data";
 
 const CategoryListBlock = styled.div`
   display: grid;
@@ -18,14 +19,9 @@ const CategoryListBlock = styled.div`
 const CategoryList = () => {
   return (
     <CategoryListBlock>
-      <CategoryItem category={"중식"} />
-      <CategoryItem category={"일식"} />
-      <CategoryItem category={"한식"} />
-      <CategoryItem category={"양식"} />
-      <CategoryItem category={"아시안"} />
-      <CategoryItem category={"분식"} />
-      <CategoryItem category={"패스트푸드"} />
-      <CategoryItem category={"디저트"} />
+      {foodList.map((item) => (
+        <CategoryItem key={item.id} category={item.category} src={item.src} />
+      ))}
     </CategoryListBlock>
   );
 };
