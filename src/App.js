@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
+import { FoodProvider } from "./FoodContext";
 
 const GlobalStyle = createGlobalStyle`
    @font-face {
@@ -28,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <>
+    <FoodProvider>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
@@ -36,7 +37,7 @@ function App() {
           <Route path="/category" element={<Category />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </FoodProvider>
   );
 }
 
