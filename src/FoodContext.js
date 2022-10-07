@@ -1,12 +1,21 @@
-import React, { createContext, useEffect, useReducer } from "react";
+import React, { createContext, useContext, useEffect, useReducer } from "react";
 // import { useState } from "react";
 import { foodSearch } from "./api";
 
 function reducer(state, action) {
   switch (action.type) {
+    case "QUERY": {
+      return {
+        loading: true,
+        query: action.query,
+        data: null,
+        error: null,
+      };
+    }
     case "LOADING": {
       return {
         loading: true,
+        query: null,
         data: null,
         error: null,
       };
@@ -14,6 +23,7 @@ function reducer(state, action) {
     case "SUCCESS": {
       return {
         loading: false,
+        query: null,
         data: action.data,
         error: null,
       };
@@ -21,6 +31,7 @@ function reducer(state, action) {
     case "ERROR": {
       return {
         loading: false,
+        query: null,
         data: null,
         error: action.error,
       };
@@ -36,25 +47,23 @@ const FoodDispatchContext = createContext();
 export function FoodProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, {
     loading: false,
+    query: null,
     data: null,
     error: null,
   });
 
-  // const [query, setQuery] = useState("");
-
   // 음식 검색
   useEffect(() => {
-    // if (query.length > 0) {
-    //   foodSearchHttpHandler(query);
-    // }
-    foodSearchHttpHandler();
-  }, []);
+    if (state.query) {
+      foodSearchHttpHandler(state.query);
+    }
+  }, [state.query]);
 
   // food search 핸들러
   const foodSearchHttpHandler = async (query) => {
     // Parameter 설정
     const params = {
-      query: "짜장면", // 검색 질의어
+      query: query, // 검색 질의어
       sort: "accuracy", // accuracy : 정확도순
       page: 1, // 페이지 번호
       size: 1, // 한 페이지에 보여질 문서 수
@@ -75,4 +84,20 @@ export function FoodProvider({ children }) {
       </FoodDispatchContext.Provider>
     </FoodStateContext.Provider>
   );
+}
+
+export function useFoodState() {
+  const context = useContext(FoodStateContext);
+  if (!context) {
+    throw new Error("Cannot find FoodProvider");
+  }
+  return context;
+}
+
+export function useFoodDispatch() {
+  const context = useContext(FoodDispatchContext);
+  if (!context) {
+    throw new Error("Cannot find FoodProvider");
+  }
+  return context;
 }

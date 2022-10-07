@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import CategoryItem from "./CategoryItem";
 import { foodList } from "../data";
@@ -20,7 +19,7 @@ const CategoryList = () => {
   return (
     <CategoryListBlock>
       {foodList.map((item) => (
-        <CategoryItem key={item.id} category={item.category} src={item.src} />
+        <CategoryItem key={item.id} {...item} />
       ))}
     </CategoryListBlock>
   );

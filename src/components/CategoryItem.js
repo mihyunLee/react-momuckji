@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useFoodDispatch } from "../FoodContext";
 
 const CategoryIcon = styled.img`
   display: none;
@@ -40,10 +41,28 @@ const CategoryButton = styled.button`
   justify-content: center;
 `;
 
-const CategoryItem = ({ category, src }) => {
+const CategoryItem = ({ id, category, src, food }) => {
+  const dispatch = useFoodDispatch();
+
+  const onClick = () => {
+    pickFood();
+  };
+
+  const pickFood = () => {
+    let randomIndex = Math.floor(Math.random() * (food.length - 0));
+    let randomFood = food[randomIndex];
+
+    if (randomFood) {
+      dispatch({
+        type: "QUERY",
+        query: randomFood,
+      });
+    }
+  };
+
   return (
     <>
-      <CategoryButton>
+      <CategoryButton onClick={onClick}>
         {category}
         <CategoryIcon src={src} />
       </CategoryButton>
