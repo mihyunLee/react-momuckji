@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import { FoodProvider } from "./FoodContext";
+import Result from "./pages/Result";
 
 const GlobalStyle = createGlobalStyle`
    @font-face {
@@ -35,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category" element={<Category />} />
+          <Route path="/result" element={<Result />} />
         </Routes>
       </BrowserRouter>
     </FoodProvider>

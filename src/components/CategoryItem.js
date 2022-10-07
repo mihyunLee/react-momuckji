@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useFoodDispatch } from "../FoodContext";
 
@@ -41,22 +42,27 @@ const CategoryButton = styled.button`
   justify-content: center;
 `;
 
+const pickRandomFood = (food) => {
+  let randomIndex = Math.floor(Math.random() * food.length);
+  let randomFood = food[randomIndex];
+
+  return randomFood;
+};
+
 const CategoryItem = ({ id, category, src, food }) => {
   const dispatch = useFoodDispatch();
 
+  const navigate = useNavigate();
+
   const onClick = () => {
-    pickFood();
-  };
+    const pickedFood = pickRandomFood(food);
 
-  const pickFood = () => {
-    let randomIndex = Math.floor(Math.random() * (food.length - 0));
-    let randomFood = food[randomIndex];
-
-    if (randomFood) {
+    if (pickedFood) {
       dispatch({
         type: "QUERY",
-        query: randomFood,
+        query: pickedFood,
       });
+      navigate("/result");
     }
   };
 
