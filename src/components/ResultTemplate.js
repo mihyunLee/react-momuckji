@@ -9,7 +9,7 @@ const ResultBlock = styled.div`
 
   margin: 0 auto;
 
-  width: 1200px;
+  width: 100%;
   height: 100%;
 
   font-size: 1.7rem;
