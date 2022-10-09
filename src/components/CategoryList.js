@@ -8,11 +8,29 @@ const CategoryListBlock = styled.div`
   grid-template-rows: repeat(2, 200px);
   justify-content: space-around;
   align-content: space-between;
+  gap: 50px;
 
-  width: 100%;
+  width: 80%;
   height: 100%;
 
   padding: 50px 0;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: repeat(4, 40px);
+    grid-template-rows: repeat(2, 40px);
+    gap: 2px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(2, 150px);
+  }
 `;
 
 const CategoryList = () => {

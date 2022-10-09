@@ -40,6 +40,16 @@ const CategoryButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const pickRandomFood = (food) => {

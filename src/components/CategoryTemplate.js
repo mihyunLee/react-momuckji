@@ -7,12 +7,24 @@ const CategoryBlock = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 1600px;
-  height: 860px;
+  width: 100%;
+  height: 100%;
 
   margin: 0 auto;
 
   font-size: 1.7rem;
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const CategoryTemplate = ({ children }) => {
