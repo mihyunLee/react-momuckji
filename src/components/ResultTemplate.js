@@ -12,11 +12,10 @@ const ResultBlock = styled.div`
   width: 1200px;
   height: 100%;
 
-  h1 {
-    font-size: 56px;
-  }
+  font-size: 1.7rem;
+
   h3 {
-    font-size: 32px;
+    padding-top: 20px;
   }
 `;
 

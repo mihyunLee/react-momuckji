@@ -6,8 +6,8 @@ import { useFoodState } from "../FoodContext";
 import styled from "styled-components";
 
 const ImgBox = styled.img`
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
 
   border-radius: 20%;
 

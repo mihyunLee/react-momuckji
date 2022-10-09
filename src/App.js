@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   }
   *{
     font-family: "BMHANNAPro";
+    box-sizing: border-box;
   }
   body{
     background: #fff;

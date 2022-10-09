@@ -7,8 +7,8 @@ const DesktopBtn = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: 400px;
-  height: 100px;
+  width: 320px;
+  height: 90px;
 
   margin-top: 50px;
 
@@ -17,7 +17,7 @@ const DesktopBtn = styled.button`
 
   background-color: #ff9b52;
   color: white;
-  font-size: 32px;
+  font-size: 28px;
 
   cursor: pointer;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));

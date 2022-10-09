@@ -12,7 +12,7 @@ const CategoryBlock = styled.div`
 
   margin: 0 auto;
 
-  font-size: 2rem;
+  font-size: 1.7rem;
 `;
 
 const CategoryTemplate = ({ children }) => {
