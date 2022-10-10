@@ -17,6 +17,18 @@ const ResultBlock = styled.div`
   h3 {
     padding-top: 20px;
   }
+
+  @media (max-width: 480px) {
+    font-size: 0.6rem;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const ResultTemplate = ({ children }) => {

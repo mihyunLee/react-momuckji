@@ -17,7 +17,7 @@ const SliderBlock = styled.div`
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
-  @media screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     margin: 40px 0;
 
     img {
@@ -27,7 +27,7 @@ const SliderBlock = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     margin: 40px 0;
 
     img {
@@ -37,12 +37,12 @@ const SliderBlock = styled.div`
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media (min-width: 769px) and (max-width: 1200px) {
     margin: 40px 0;
 
     img {
-      width: 84px;
-      height: 84px;
+      width: 72px;
+      height: 72px;
       margin: 0 40px;
     }
   }

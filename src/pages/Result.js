@@ -13,9 +13,19 @@ const ImgBox = styled.img`
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-  @media screen and (max-width: 480px) {
-    width: 360px;
-    height: 360px;
+  @media (max-width: 480px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 230px;
+    height: 230px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    width: 260px;
+    height: 260px;
   }
 `;
 

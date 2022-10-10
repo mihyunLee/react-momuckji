@@ -22,21 +22,21 @@ const DesktopBtn = styled.button`
   cursor: pointer;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-  @media screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     width: 160px;
     height: 45px;
 
     font-size: 16px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     width: 240px;
     height: 60px;
 
     font-size: 20px;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media (min-width: 769px) and (max-width: 1200px) {
     width: 280px;
     height: 70px;
 

@@ -14,6 +14,21 @@ const CategoryIcon = styled.img`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    width: 64px;
+    height: 64px;
+  }
 `;
 
 const CategoryButton = styled.button`
@@ -41,13 +56,15 @@ const CategoryButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     font-size: 0.8rem;
   }
-  @media screen and (max-width: 768px) {
+
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 1rem;
   }
-  @media screen and (max-width: 1200px) {
+
+  @media (min-width: 1200px) {
     font-size: 1.4rem;
   }
 `;

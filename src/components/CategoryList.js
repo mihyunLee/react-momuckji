@@ -15,19 +15,19 @@ const CategoryListBlock = styled.div`
 
   padding: 50px 0;
 
-  @media screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     grid-template-columns: repeat(4, 40px);
     grid-template-rows: repeat(2, 40px);
     gap: 2px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(2, 100px);
     gap: 8px;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media (min-width: 769px) and (max-width: 1200px) {
     grid-template-columns: repeat(4, 150px);
     grid-template-rows: repeat(2, 150px);
   }

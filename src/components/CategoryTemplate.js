@@ -14,15 +14,15 @@ const CategoryBlock = styled.div`
 
   font-size: 1.7rem;
 
-  @media screen and (max-width: 480px) {
+  @media (max-width: 480px) {
     font-size: 0.7rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 1.2rem;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media (min-width: 769px) and (max-width: 1200px) {
     font-size: 1.3rem;
   }
 `;
