@@ -11,6 +11,14 @@ function reducer(state, action) {
         error: null,
       };
     }
+    case "RESET": {
+      return {
+        loading: false,
+        query: null,
+        data: null,
+        error: null,
+      };
+    }
     case "LOADING": {
       return {
         loading: true,

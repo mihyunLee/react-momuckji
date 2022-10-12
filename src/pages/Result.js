@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import ResultTemplate from "../components/ResultTemplate";
-import { useFoodState } from "../FoodContext";
+import { useFoodDispatch, useFoodState } from "../FoodContext";
 import styled from "styled-components";
 
 const ImgBox = styled.img`
@@ -31,7 +31,9 @@ const ImgBox = styled.img`
 
 const Result = () => {
   const foods = useFoodState();
-  const src = foods.data ? foods.data.documents[0].image_url : null;
+  const dispatch = useFoodDispatch();
+
+  const src = foods.data ? foods.data.documents[1].image_url : null;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,13 +43,22 @@ const Result = () => {
     }
   }, [foods.query]);
 
+  console.log(foods);
+  console.log(src);
+
   return (
     <ResultTemplate>
       <ImgBox src={src} />
       <h3>오늘의 메뉴는</h3>
       <h1>{foods.query}</h1>
       <span></span>
-      <Button text={"다시 추천 받기"} onClick={() => navigate("/")} />
+      <Button
+        text={"다시 추천 받기"}
+        onClick={() => {
+          navigate("/");
+          dispatch({ type: "RESET" });
+        }}
+      />
     </ResultTemplate>
   );
 };
