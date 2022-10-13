@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
-import { FoodProvider } from "./FoodContext";
+import { FoodProvider } from "./context/FoodContext";
 import Result from "./pages/Result";
 
 const GlobalStyle = createGlobalStyle`

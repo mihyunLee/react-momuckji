@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useReducer } from "react";
-import { foodSearch } from "./api";
+import { foodSearch } from "../utils/api";
 
 function reducer(state, action) {
   switch (action.type) {

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import ResultTemplate from "../components/ResultTemplate";
-import { useFoodDispatch, useFoodState } from "../FoodContext";
+import { useFoodDispatch, useFoodState } from "../context/FoodContext";
 import styled from "styled-components";
 
 const ImgBox = styled.img`

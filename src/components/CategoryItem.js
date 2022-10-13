@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { useFoodDispatch } from "../FoodContext";
+import { useFoodDispatch } from "../context/FoodContext";
 
 const CategoryIcon = styled.img`
   display: none;
