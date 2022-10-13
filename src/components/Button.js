@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
-const DesktopBtn = styled.button`
+const Btn = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +21,11 @@ const DesktopBtn = styled.button`
 
   cursor: pointer;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(-0.25em);
+  }
 
   @media (max-width: 480px) {
     width: 160px;
@@ -51,14 +56,14 @@ const SearchIcon = styled.div`
 
 const Button = ({ text, onClick, search }) => {
   return (
-    <DesktopBtn onClick={onClick}>
+    <Btn onClick={onClick}>
       {text}
       {search && (
         <SearchIcon>
           <FaSearch />
         </SearchIcon>
       )}
-    </DesktopBtn>
+    </Btn>
   );
 };
 

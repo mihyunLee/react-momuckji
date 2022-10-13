@@ -16,8 +16,8 @@ const CategoryListBlock = styled.div`
   padding: 50px 0;
 
   @media (max-width: 480px) {
-    grid-template-columns: repeat(4, 40px);
-    grid-template-rows: repeat(2, 40px);
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: repeat(2, 75px);
     gap: 2px;
   }
 

@@ -14,18 +14,18 @@ const ImgBox = styled.img`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   @media (max-width: 480px) {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
-    width: 230px;
-    height: 230px;
+    width: 320px;
+    height: 320px;
   }
 
   @media (min-width: 769px) and (max-width: 1200px) {
-    width: 260px;
-    height: 260px;
+    width: 360px;
+    height: 360px;
   }
 `;
 
@@ -48,7 +48,6 @@ const Result = () => {
       <ImgBox src={src} />
       <h3>오늘의 메뉴는</h3>
       <h1>{foods.query}</h1>
-      <span></span>
       <Button
         text={"다시 추천 받기"}
         onClick={() => {

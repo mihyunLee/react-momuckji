@@ -57,15 +57,15 @@ const CategoryButton = styled.button`
   justify-content: center;
 
   @media (max-width: 480px) {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
-  @media (min-width: 1200px) {
-    font-size: 1.4rem;
+  @media (min-width: 769px) and (max-width: 1200px) {
+    font-size: 1.7rem;
   }
 `;
 
