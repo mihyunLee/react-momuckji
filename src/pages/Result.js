@@ -43,9 +43,6 @@ const Result = () => {
     }
   }, [foods.query]);
 
-  console.log(foods);
-  console.log(src);
-
   return (
     <ResultTemplate>
       <ImgBox src={src} />
