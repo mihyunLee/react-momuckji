@@ -6,10 +6,10 @@ import { useFoodDispatch, useFoodState } from "../context/FoodContext";
 import styled from "styled-components";
 
 const ImgBox = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 320px;
+  height: 320px;
 
-  border-radius: 20%;
+  border-radius: 15%;
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
@@ -19,13 +19,13 @@ const ImgBox = styled.img`
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
-    width: 320px;
-    height: 320px;
+    width: 250px;
+    height: 250px;
   }
 
   @media (min-width: 769px) and (max-width: 1200px) {
-    width: 360px;
-    height: 360px;
+    width: 260px;
+    height: 260px;
   }
 `;
 

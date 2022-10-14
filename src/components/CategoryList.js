@@ -4,10 +4,10 @@ import { foodList } from "../utils/data";
 
 const CategoryListBlock = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: repeat(4, 170px);
+  grid-template-rows: repeat(2, 170px);
   justify-content: space-around;
-  align-content: space-between;
+  align-content: center;
   gap: 50px;
 
   width: 80%;

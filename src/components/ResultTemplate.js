@@ -12,11 +12,10 @@ const ResultBlock = styled.div`
   width: 100%;
   height: 100%;
 
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 
   h3 {
     padding-top: 20px;
-    // margin-bottom: -30px;
 
     &:after {
       content: "";
@@ -33,15 +32,11 @@ const ResultBlock = styled.div`
   }
 
   @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+
+  @media (min-width: 481px) and (max-width: 1200px) {
     font-size: 1.2rem;
-  }
-
-  @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 1.4rem;
-  }
-
-  @media (min-width: 769px) and (max-width: 1200px) {
-    font-size: 1.7rem;
   }
 `;
 

@@ -12,7 +12,7 @@ const CategoryBlock = styled.div`
 
   margin: 0 auto;
 
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 
   @media (max-width: 480px) {
     font-size: 0.7rem;

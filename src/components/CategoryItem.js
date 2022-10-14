@@ -43,7 +43,7 @@ const CategoryButton = styled.button`
   }
   border: none;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1.7rem;
 
   cursor: pointer;
 

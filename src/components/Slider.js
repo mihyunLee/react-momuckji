@@ -8,12 +8,12 @@ const SliderBlock = styled.div`
   align-items: center;
 
   width: 100%;
-  margin: 80px 0;
+  margin: 70px 0;
   font-size: 128px;
 
   img {
-    width: 128px;
-    height: 128px;
+    width: 84px;
+    height: 84px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 

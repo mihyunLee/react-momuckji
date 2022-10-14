@@ -7,8 +7,8 @@ const Btn = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: 320px;
-  height: 90px;
+  width: 260px;
+  height: 70px;
 
   margin-top: 50px;
 
@@ -17,7 +17,7 @@ const Btn = styled.button`
 
   background-color: #ff9b52;
   color: white;
-  font-size: 28px;
+  font-size: 22px;
 
   cursor: pointer;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -34,18 +34,11 @@ const Btn = styled.button`
     font-size: 16px;
   }
 
-  @media (min-width: 481px) and (max-width: 768px) {
-    width: 240px;
-    height: 60px;
+  @media (min-width: 481px) and (max-width: 1200px) {
+    width: 200px;
+    height: 55px;
 
-    font-size: 20px;
-  }
-
-  @media (min-width: 769px) and (max-width: 1200px) {
-    width: 280px;
-    height: 70px;
-
-    font-size: 24px;
+    font-size: 18px;
   }
 `;
 
