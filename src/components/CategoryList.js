@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import CategoryItem from "./CategoryItem";
-import { foodList } from "../utils/data";
+import { foodList } from "../data/foodData";
 
 const CategoryListBlock = styled.div`
   display: grid;
